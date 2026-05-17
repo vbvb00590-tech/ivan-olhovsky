@@ -32,6 +32,7 @@
     font-size: 14px;
     line-height: 1.7;
     overflow-x: hidden;
+    max-width: 100vw;
     cursor: crosshair;
   }
 
@@ -170,8 +171,7 @@
   .hero-name .line-1 { display: block; color: var(--text); }
   .hero-name .line-2 { 
     display: block; 
-    color: transparent;
-    -webkit-text-stroke: 1px var(--purple);
+    color: var(--text);
   }
 
   .hero-title {
@@ -841,15 +841,16 @@
     }
 
     .hero {
-      min-height: 100svh;
-      padding: 90px 20px 48px;
+      min-height: auto;
+      padding: 88px 20px 40px;
       align-items: flex-start;
       flex-direction: column;
     }
+    .hero-content { max-width: 100%; }
     .hero-tag { font-size: 8px; letter-spacing: 0.12em; padding: 5px 12px; margin-bottom: 20px; white-space: normal; }
-    .hero-name { font-size: clamp(52px, 19vw, 76px); letter-spacing: -0.03em; line-height: 0.88; margin-bottom: 18px; }
-    .hero-title { font-size: 14px; line-height: 1.4; margin-bottom: 18px; }
-    .hero-desc { font-size: 12px; line-height: 1.8; margin-bottom: 28px; }
+    .hero-name { font-size: clamp(28px, 8.5vw, 42px); letter-spacing: -0.02em; line-height: 1.0; margin-bottom: 16px; white-space: nowrap; }
+    .hero-title { font-size: 13px; line-height: 1.5; margin-bottom: 16px; }
+    .hero-desc { font-size: 12px; line-height: 1.8; margin-bottom: 28px; max-width: 100%; }
 
     .hero-stats {
       position: static;
